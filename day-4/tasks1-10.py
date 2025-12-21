@@ -42,3 +42,6 @@ print(company[0:6])
 
 #Task 10 - Check if Coding For All string contains a word Coding using the method index, find or other methods.
 print(company.find("Coding")) #find() returns the index for the word, returns -1 if not found
+
+strings[0] = "Replace"
+print(strings)

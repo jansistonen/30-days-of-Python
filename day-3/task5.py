@@ -19,9 +19,33 @@ circumference = 2 * 3.14 * rad
 print("Area of a circle is: ", area, " - Circumference is: ", circumference)"""
 
 #task12
-a = len("Python")
-b = len("Dragon")
-print(a," ", b)
+a = "Python"
+b = "Dragon"
+c = len(a)
+d = len(b)
+print(c," ", d)
 print(a == b)
 
+print("on" in a and "on" in b)
 
+#task14
+
+string = "I hope this course is not full of jargon"
+word = "jargon"
+
+print("Is the word ", word, " in a sentence? - ", word in string)
+
+#task 16
+float_c = float(c)
+string_c = str(float_c)
+print(float_c, type(float_c), string_c, type(string_c))
+
+#task17
+num = int(input("Give a number 0-99: "))
+is_even = num % 2
+if is_even == 0:
+    print("The number is even!")
+else:
+    print("The number is not EVEN!!")
+
+#task18

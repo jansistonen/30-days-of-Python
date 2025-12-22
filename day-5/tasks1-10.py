@@ -27,10 +27,28 @@ print(mixed_data_types)
 print(it_companies)
 #Task 8
 print(len(it_companies))
-#Task 9 
+#Task 9 - Print the first, middle and last company
 first_company = it_companies[0]
 last_company = it_companies[-1]
 middle_company_index = int(len(it_companies)/2)
 middle_company = it_companies[middle_company_index]
 
 print(first_company, last_company, middle_company)
+
+#task 10 - Print the list after modifying one of the companies
+it_companies[0] = 'Nokia'
+it_companies[-1] = 'Samsung'
+print(it_companies)
+
+#Task 11 - Add an IT company to it_companies
+it_companies.append('Huawei')
+print(it_companies)
+
+ #Task 12 - Insert an IT company in the middle of the companies list
+middle_company_index = int(len(it_companies)/2)
+it_companies.insert(middle_company_index, 'Canonical')
+print(it_companies)
+
+#Task 13
+it_companies[0] = it_companies[0].upper()
+print(it_companies)

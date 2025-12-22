@@ -25,3 +25,12 @@ it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Am
 #Task 7 - print list
 print(mixed_data_types)
 print(it_companies)
+#Task 8
+print(len(it_companies))
+#Task 9 
+first_company = it_companies[0]
+last_company = it_companies[-1]
+middle_company_index = int(len(it_companies)/2)
+middle_company = it_companies[middle_company_index]
+
+print(first_company, last_company, middle_company)

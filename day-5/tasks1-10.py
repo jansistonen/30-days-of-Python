@@ -52,3 +52,58 @@ print(it_companies)
 #Task 13
 it_companies[0] = it_companies[0].upper()
 print(it_companies)
+
+# Task 14 - Join the it_companies with a string '#;  '
+result = '#;  '.join(it_companies)
+print(result)
+
+#Task 15 - 
+print('CGI' in it_companies)
+
+#Task 16 - Sort the list using sort() method
+it_companies.sort()
+print(it_companies)
+
+#Task 17 - 
+it_companies.reverse()
+print(it_companies)
+
+#Task 18 & 19
+first3 = it_companies[0:3]
+last3 = it_companies[-3:]
+print(first3, " - ", last3)
+
+#Task 20
+mid_index = int(len(it_companies)/2)
+if mid_index % 2 == 0:
+    mid_comp = it_companies[mid_index:mid_index+1]
+else:    
+    mid_comp = it_companies[mid_index]
+print(mid_comp)
+
+#Task 21
+it_companies.pop(0)
+print("task21 - ", it_companies)
+
+#Task 22
+mid = it_companies[mid_index]
+it_companies.pop(mid_index)
+print('Popped: ',mid, ' - Left of the list: ', it_companies)
+
+#Task 24
+it_companies.clear()
+print(it_companies)
+
+#Task 25
+del it_companies
+
+#Task 26
+front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+back_end = ['Node','Express', 'MongoDB']
+
+full_stack = front_end + back_end
+print(full_stack)
+
+full_stack.insert(full_stack.index('Redux')+1, 'Python')
+full_stack.insert(full_stack.index('Python')+1, 'SQL')
+print(full_stack)

@@ -104,6 +104,15 @@ back_end = ['Node','Express', 'MongoDB']
 full_stack = front_end + back_end
 print(full_stack)
 
-full_stack.insert(full_stack.index('Redux')+1, 'Python')
-full_stack.insert(full_stack.index('Python')+1, 'SQL')
+#Task 27
+full_stack.insert(full_stack.index('Redux')+1, 'Python') #find a correct index for inserting after 'redux'
+full_stack.insert(full_stack.index('Python')+1, 'SQL')  #same as above but after just inserted 'python'
 print(full_stack)
+
+#Task level - 2
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+sum = 0
+for i in ages:
+    sum = sum + i
+ka = sum / len(ages)
+print('average of list ages is: ', ka, 'elements in list: ', len(ages))

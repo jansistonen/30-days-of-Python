@@ -208,6 +208,6 @@ last_country = countries[-1]
 print(first_country, ' - ', last_country)
 
 first_half = countries[0:middle]
-last_half = countries[middle:-1]
+last_half = countries[middle:len(countries)]
 print(first_half)
 print('***\n***\n', last_half)

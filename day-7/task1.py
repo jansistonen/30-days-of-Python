@@ -11,7 +11,9 @@ print(len(it_companies))
 #Add 'Twitter' to it_companies
 it_companies.add('Twitter')
 #Insert multiple IT companies at once to the set it_companies
-it_companies.update(['Nokia', 'Huawei', 'Nvidia'])
+it_companies.update(['Nokia', 'Huawei', 'Nvidia']) #update() takes a list as a argument!!!
 print(it_companies)
 #Remove one of the companies from the set it_companies
+removed = it_companies.pop()
+print(removed)
 #What is the difference between remove and discard

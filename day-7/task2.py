@@ -15,5 +15,8 @@ print(A.issubset(B))
 #Are A and B disjoint sets
 print(A.isdisjoint(B))
 #Join A with B and B with A
+AB = A.union(B)
+BA = B.union(A)
+print(AB,'\n', BA)
 #What is the symmetric difference between A and B
 #Delete the sets completely

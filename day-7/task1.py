@@ -14,6 +14,6 @@ it_companies.add('Twitter')
 it_companies.update(['Nokia', 'Huawei', 'Nvidia']) #update() takes a list as a argument!!!
 print(it_companies)
 #Remove one of the companies from the set it_companies
-removed = it_companies.pop()
+removed = it_companies.pop() #removes one random element from set
 print(removed)
 #What is the difference between remove and discard

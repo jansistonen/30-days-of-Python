@@ -30,7 +30,11 @@ print(type(student.get('skills')))
 student['skills'] = ['Programming', 'English']
 print(student.get('skills'))
 #Get the dictionary keys as a list
+keys = student.keys()
+print(keys)
 #Get the dictionary values as a list
+values = student.values()
+print(values)
 #Change the dictionary to a list of tuples using items() method
 #Delete one of the items in the dictionary
 #Delete one of the dictionaries

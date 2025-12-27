@@ -15,15 +15,20 @@ student = {
     'gender':'value3',
     'age':'value4',
     'status':'value5',
-    'skills':'value6',
+    'skills':[],
     'country':'value7',
     'city':'value8',
     'address':'value9',
     }
 print(student)
 #Get the length of the student dictionary
+print(len(student))
 #Get the value of skills and check the data type, it should be a list
+print(type(student.get('skills')))
+
 #Modify the skills values by adding one or two skills
+student['skills'] = ['Programming', 'English']
+print(student.get('skills'))
 #Get the dictionary keys as a list
 #Get the dictionary values as a list
 #Change the dictionary to a list of tuples using items() method

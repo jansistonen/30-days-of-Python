@@ -36,5 +36,11 @@ print(keys)
 values = student.values()
 print(values)
 #Change the dictionary to a list of tuples using items() method
+student_tuple = student.items()
+print('\nThis is dictionary changed to list of items: ', student_tuple)
 #Delete one of the items in the dictionary
+del student['address']
+print(student)
 #Delete one of the dictionaries
+del student
+print(student)

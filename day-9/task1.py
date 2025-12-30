@@ -19,3 +19,13 @@ if difference != 0:
         print('We have one year of age difference')
 else:
     print('We are same age!!!')
+
+#task 3
+a = int(input('inbut a: '))
+b = int(input('input b: '))
+if a < b:
+    print('a is smaller')
+elif a > b:
+    print('a is bigger')
+else:
+    print('they are equal')

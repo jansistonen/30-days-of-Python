@@ -21,4 +21,4 @@ print(string_split)
 string_to_set = set(string_split)
 lenght_of_set = len(string_to_set)
 print('Lenght of list: ', len(string_split), 'lengths of set: ', lenght_of_set)
-print(f'That means there are {lenght_of_set} unique words in a given sentence')
+print(f'That means there are {lenght_of_set} unique words in a given sentence') #remember f-formating to print int-values dierctly

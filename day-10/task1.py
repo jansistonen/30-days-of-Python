@@ -57,3 +57,13 @@ for j in range(101):
     sum += j
 else:
     print(sum)
+
+sum_even = 0
+sum_odd = 0
+
+for i in range(101):
+    if i % 2 == 0:
+        sum_even = sum_even + i
+    else:
+        sum_odd = sum_odd + i
+print(f'Sum of even numbers is: {sum_even} \n Sum of odd numbers is: {sum_odd}')

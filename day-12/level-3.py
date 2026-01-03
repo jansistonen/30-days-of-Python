@@ -6,7 +6,6 @@ from random import randint
 def shuffle_list(para1):
     copy_list = list(para1)
     new_list = []
-    list_to_set = set(para1)
     for i in range(len(para1)):
         if len(copy_list) > 1:
             index = randint(0,len(copy_list)-1)
@@ -17,4 +16,16 @@ def shuffle_list(para1):
     return new_list
 print(shuffle_list([7,6,3,5,4,90,12,14,40]))
 
+#pythonissa olemassa myös random.shuffle(para1)
+
 #Write a function which returns an array of seven random numbers in a range of 0-9. All the numbers must be unique.
+def random_numbers():
+    num_list = []
+    i = 0
+    while i < 7:
+        element = randint(0,9)
+        if element not in num_list:
+            num_list.append(element)
+            i+=1
+    return num_list
+print(random_numbers())

@@ -204,3 +204,16 @@ for i in countries:
         new_list.append(i)
     
 print(new_list)
+
+# 2 - This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits_reversed = []
+for i in fruits:
+    fruits_reversed.insert(0, i)
+print(fruits_reversed)
+
+#Go to the data folder and use the countries_data.py file.
+#What are the total number of languages in the data - add to set, get set len()
+#Find the ten most spoken languages from the data 
+#Find the 10 most populated countries in the world
+

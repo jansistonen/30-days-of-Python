@@ -44,3 +44,22 @@ def is_six(country):
         return False
 countries_of_len = filter(is_six, countries)
 print(list(countries_of_len))
+
+# 6 - Use filter to filter out countries containing six letters and more in the country list.
+def is_six_or_more(country):
+    if len(country) >= 6:
+        return True
+    else:
+        return False
+countries_of_len_six = filter(is_six_or_more, countries)
+print(list(countries_of_len_six))
+
+
+# 7 - Use filter to filter out countries starting with an 'E'
+def starts_e(country):
+    if country.startswith('E'):
+        return True
+    else:
+        return False
+countries_e = filter(starts_e, countries)
+print(list(countries_e))

@@ -3,6 +3,7 @@
 # nyt pisteet tallentuu vain ohjelmaan muttei tiedostoon, opetellaan tallentamaan kaikki json-filuun
 
 import json
+import os
 
 data = {
     'sessio_id' : 'sessio1',
@@ -12,15 +13,35 @@ data = {
     'heitetyt_tikat': 0
 }
 
+FILENAME = "sessions.json"
+
+# 1. Lue vanha data (tai luo uusi)
+if os.path.exists(FILENAME):
+    with open(FILENAME, "r") as f:
+        all_data = json.load(f)
+else:
+    all_data = {"sessiot": []}
+
+# 2. Luo uusi sessio
+uusi_sessio = {
+    "sessio_id": "sessio3",
+    "kierros": [],
+    "kierrokset": data["kierrokset"],
+    "session_ka": 0
+}
+
+all_data["sessiot"].append(uusi_sessio)
+
 json_str = json.dumps(data, indent=4)
 with open('sample.json', 'w') as f:
     f.write(json_str)
 
-print(json_str)
+
 
 kierroksia = 0
 lista_per_kierros = []
 lista_kierroksen_tulos = []
+jatka = True
 
 def kierros_count(para1):
     summa = 0
@@ -38,31 +59,41 @@ def kierros_lista_läpikäynti(para2):
         return None
     return sum / len(lista_kierroksen_tulos)
 
-while input('Jatka heittoja painamalla k') == 'k':
+while jatka:
     #syötä täällä heittosi
-    heitto1 = int(input('Tikka 1: '))
-    heitto2 = int(input('Tikka 2: '))
-    heitto3 = int(input('Tikka 3: '))
-    lista_per_kierros.append(heitto1)
-    lista_per_kierros.append(heitto2)
-    lista_per_kierros.append(heitto3)
+    print('Q lopettaa kieroksen')
+    heitto1 = input('Tikka 1: ')
+    if heitto1 == '':
+        heitto1 = 0
+    heitto2 = input('Tikka 2: ')
+    if heitto2 == '':
+        heitto2 = 0
+    heitto3 = input('Tikka 3: ')
+    if heitto3 == '':
+        heitto3 = 0
+    if heitto1 == 'q' or heitto2 == 'q' or heitto3 == 'q':
+        print('päätit lopettaa')
+        break
+    lista_per_kierros.append(int(heitto1))
+    lista_per_kierros.append(int(heitto2))
+    lista_per_kierros.append(int(heitto3))
     lista_kierroksen_tulos.append(kierros_count(lista_per_kierros))
     print('Vuoro heitetty!!!')
     lista_per_kierros.clear()
     kierroksia += 1
+    uusi_sessio['kierros'] = uusi_sessio['kierros'] + [[int(heitto1), int(heitto2), int(heitto3)]]
 
 print(f'Lopetit heittovuoron. Heitit yhteensä {kierroksia} kierrosta!')
 print(lista_kierroksen_tulos)
-print('Heittovuoron keskiarvo: ', kierros_lista_läpikäynti(lista_kierroksen_tulos))
+print('Session keskiarvo: ', kierros_lista_läpikäynti(lista_kierroksen_tulos))
 
-data['kierrokset'] = kierroksia
-data['heitetyt_tikat'] = 3 * kierroksia
+uusi_sessio['kierrokset'] = kierroksia
+uusi_sessio['session_ka'] = kierros_lista_läpikäynti(lista_kierroksen_tulos)
 
-with open('sample.json', 'w') as f:
-    json.dump(data, f, indent=4)
+with open(FILENAME, "w") as f:
+    json.dump(all_data, f, indent=4)
 
-print("Tallennettu sample.json")
-print(json.dumps(data, indent=4))
+
 
 #TODO 
 # - Aloita kierros 

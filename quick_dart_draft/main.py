@@ -4,6 +4,7 @@
 
 import json
 import os
+from datetime import datetime
 
 data = {
     'sessio_id' : 'sessio1',
@@ -15,6 +16,9 @@ data = {
 
 FILENAME = "sessions.json"
 
+now = datetime.now()
+timestamp = now.strftime("%d/%m/%Y-%H:%M:")
+
 # 1. Lue vanha data (tai luo uusi)
 if os.path.exists(FILENAME):
     with open(FILENAME, "r") as f:
@@ -24,7 +28,7 @@ else:
 
 # 2. Luo uusi sessio
 uusi_sessio = {
-    "sessio_id": "sessio3",
+    "sessio_id": "sessio" + timestamp,
     "kierros": [],
     "kierrokset": data["kierrokset"],
     "session_ka": 0

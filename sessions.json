@@ -1,99 +1,41 @@
 {
     "sessiot": [
         {
-            "sessio_id": "sessio3",
-            "kierrokset": 2,
-            "kierroksien_ka": 0
-        },
-        {
-            "sessio_id": "sessio3",
-            "kierros": [
-                10,
-                10,
-                10
-            ],
-            "kierrokset": 4,
-            "kierroksien_ka": 0
-        },
-        {
-            "sessio_id": "sessio3",
-            "kierros": [
-                10,
-                10,
-                10,
-                20,
-                20,
-                20
-            ],
-            "kierrokset": 2,
-            "kierroksien_ka": 0
-        },
-        {
-            "sessio_id": "sessio3",
+            "sessio_id": "sessio06/01/2026-16:29:",
             "kierros": [
                 [
-                    1,
-                    1,
-                    1
+                    3,
+                    4,
+                    8
                 ],
                 [
-                    2,
-                    2,
-                    2
-                ]
-            ],
-            "kierrokset": 2,
-            "kierroksien_ka": 0
-        },
-        {
-            "sessio_id": "sessio3",
-            "kierros": [
+                    4,
+                    3,
+                    30
+                ],
+                [
+                    4,
+                    20,
+                    20
+                ],
+                [
+                    30,
+                    30,
+                    10
+                ],
                 [
                     10,
-                    20,
+                    10,
                     30
                 ],
                 [
                     40,
                     40,
-                    40
-                ],
-                [
-                    60,
-                    60,
                     0
-                ],
-                [
-                    50,
-                    50,
-                    4
-                ],
-                [
-                    40,
-                    40,
-                    10
                 ]
             ],
-            "kierrokset": 5,
-            "session_ka": 98.8
-        },
-        {
-            "sessio_id": "sessio3",
-            "kierros": [],
-            "kierrokset": 0,
-            "session_ka": null
-        },
-        {
-            "sessio_id": "sessio3",
-            "kierros": [
-                [
-                    10,
-                    10,
-                    20
-                ]
-            ],
-            "kierrokset": 1,
-            "session_ka": 40.0
+            "kierrokset": 6,
+            "session_ka": 49.333333333333336
         }
     ]
 }

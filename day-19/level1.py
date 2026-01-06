@@ -58,6 +58,8 @@ def most_spoken_languages(countries, count):
 
 print(most_spoken_languages(data, 3))
 
+# 3 - Read the countries_data.json data file in data directory, create a function that creates a list of the ten most populated countries
+
 def most_population(countries, count):
     result = []
     for country in countries:

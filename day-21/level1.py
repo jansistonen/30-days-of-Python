@@ -45,7 +45,7 @@ class Statistics:
         range = self.data[-1] - self.data[0]
         return range
     def mean(self):
-        sum = sum(self)
+        summa = sum(self)
         divisor = len(self.data)
         mean = sum / divisor
         return mean

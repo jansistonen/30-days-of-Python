@@ -18,6 +18,27 @@ for word in words:
         counter[word] = 1
     else:
         counter[word] = counter[word] + 1'''
-    counter[word] = counter.get(word, 0) + 1
+    counter[word] = counter.get(word, 0) + 1 #.get tarkistaa ensin löydetäänkö annettua paramtria dictionarystä, jos ei, annetaan sille
+    #arvo 0
 
-print(counter)
+#print(counter)
+for key in counter:
+    print(key, counter[key])
+print('\n---------------\n') #little extrarow for clarity
+
+#haetaan isoin arvo
+max_value = -1
+max_key = None
+temp = []
+
+for k,v in counter.items(): #python specific! you can give key,value - pair to foreach!!
+    if v > max_value:
+        max_value = v
+        max_key = k
+    temp.append((v, k)) #lisätään key-value parit listaan mutta arvo ensin! temp on lista jossa elementti on tuple
+
+print(f'Most common word is: {max_key}. It is found {max_value} times!')
+
+temp = sorted(temp, reverse=True) #järjestetään lista jossa on key-value parit, nyt value ensin joten se on järjestysperuste
+for i in temp:
+    print(i)

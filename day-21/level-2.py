@@ -10,8 +10,13 @@ class PersonAccount:
         self.incomes = []
         self.expenses = []
 
-    def total_income(self):
-        pass
+    def total_income(self, incomes):
+        total = 0
+        for i in incomes:
+            total = total + i['amount']
+        
+        return total
+
     def total_expense(self):
         pass
     def account_info(self):
@@ -38,3 +43,9 @@ p1.add_income('tutoring', 100)
 p1.add_expense('Car insurance', 80)
 p1.add_income('Volunteer work', 80)
 print(p1.expenses, ' and incomes: ', p1.incomes)
+
+print('total incomes: ', p1.total_income(p1.incomes))
+
+p1.add_income('Taxi driving', 200)
+
+print('new incomes, total is: ', p1.total_income(p1.incomes))

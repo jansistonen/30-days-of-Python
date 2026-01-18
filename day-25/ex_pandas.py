@@ -23,5 +23,7 @@ print(s)
 
 #Creating a Pandas Series Using Linspace
 
-s = pd.Series(np.linspace(5,20,10))
+s = pd.Series(np.linspace(5,20,10)) #numpys linspace() 'returns an array of evenly spaced numbers over a specified range.'
 print(s)
+
+#DATA FRAMES
